@@ -1,0 +1,38 @@
+{
+ "decline": {
+  "t": "Why my products are allowed to say \"I don't know\"",
+  "d": "A finance assistant that guesses is worse than one that stays silent.",
+  "m": 2,
+  "b": [
+   "Most assistants are built to always produce an answer. In finance, that is the wrong default. A confident figure that is wrong costs the user more than an honest blank.",
+   "In FIN-OS, every answer starts from the user's own figures, not from a general guess. Before anything is shown, a verification layer checks that the numbers in the reply agree with the data they came from. If they do not agree, the answer does not appear.",
+   "The same logic covers questions the system cannot check. Forecasts and recommendations are declined, and the product says so plainly: it does not have that data. That sentence is a feature I wrote into the requirements, not an error message.",
+   "This changes how a product feels. An assistant that sometimes declines teaches the user which answers they can rely on. One that never declines teaches them to double-check everything, which defeats the point of having it.",
+   "The practical rule I take from this is simple. For every feature, I write down what the product must refuse to do, and I give that refusal the same care as the answer. Honest over impressive is not a slogan on this site; it is a line item in the spec."
+  ]
+ },
+ "private": {
+  "t": "A privacy setting should be a default, not a promise",
+  "d": "Location sharing in VYBES LYNK is off until a student turns it on.",
+  "m": 2,
+  "b": [
+   "A campus discovery app is only useful if people can find each other. It is also an app that asks for location, which is exactly the thing students are right to be careful about.",
+   "So in VYBES LYNK, location is off by default. Nothing appears on the map until the student turns sharing on. That choice is recorded on the server, so consent is a logged event, not an assumption.",
+   "Even after consent, not everyone sees the same thing. Connections see a position rounded to about 10 metres. Everyone else sees only a grid cell of roughly 100 metres. Precision is something you earn by being connected, not something the app hands out to all.",
+   "I think of this as designing the worst case first. If a setting is buried, or on by default, then privacy depends on every user finding it in time. If it is off by default, privacy holds even for the person who never opens settings.",
+   "AkaarAI follows the same instinct: the plan is that photos are not kept on the server. The question I ask in every spec is what the product does when the user does nothing, because that is what most users do."
+  ]
+ },
+ "rules": {
+  "t": "Put the rules in code, not in the model",
+  "d": "Dates, ageing and verdicts should be computed, not generated.",
+  "m": 2,
+  "b": [
+   "Language models are good at reading messy input and writing clear text. They are not what I want deciding a legal deadline.",
+   "DueClock is built around the statutory payment clock for small suppliers: 15 days when there is no written agreement, and never more than 45 days with one. Dates, ageing and interest are rules in code. A model may help write a reminder, but it never calculates what is owed or when.",
+   "AkaarAI draws the same line. The try-on preview is generated, but the colour and pattern verdicts come from rules that can be measured, and the app labels the result a preview, not a size check.",
+   "Rules are boring in the best way. They can be tested against a signed set of cases, they give the same answer twice, and when someone asks why, there is a reason to show. One of DueClock's launch criteria is that the clock engine passes a signed statutory test pack.",
+   "My working method is to let the model do what only a model can do, and to keep everything a user could dispute inside rules I can explain. Explainable by rule is the third of the three principles on this site, and the one I trust most."
+  ]
+ }
+}
