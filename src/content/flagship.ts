@@ -6,7 +6,7 @@ import type { Project } from './types';
 export const FINOS: Project = {
   slug: 'finos', idx: '01', name: 'FIN-OS', kind: 'Core', hue: '#c6f135', status: 'Live', tone: 'live',
   tagline: "India's personal-finance operating system: 120 pages, 90 calculators and a Hindi/Hinglish voice AI that runs on local models.",
-  period: 'Jul 2026 → ongoing',
+  period: 'May 2026 → ongoing',
   role: 'Product owner and system architect. Wrote the PRD, FRD, TRD, BRD, MRD, CRD, DRD, ARD, NFRD and SOP; built with Claude Code as the pair-programmer and verified with tests.',
   link: { href: 'https://finos1.vercel.app', text: 'finos1.vercel.app' },
   problem: {

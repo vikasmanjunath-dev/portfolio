@@ -70,5 +70,5 @@ What this shows is that a port behaves like the code it copies, not that the rul
 
 ## Print routes
 
-`/print/resume/` and `/print/<core-slug>/` are print-styled pages. The PDFs in `public/` (`Vikas_Manjunath_Resume.pdf`, `onepagers/`)
+`/print/resume/<software|product|risk>/` and `/print/<core-slug>/` are print-styled pages. The PDFs in `public/` (`Vikas_Manjunath_Resume*.pdf`, `onepagers/`)
 are produced from them with headless Chrome (`--print-to-pdf`), so the PDFs and the site share one source of content.

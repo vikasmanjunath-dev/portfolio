@@ -23,6 +23,7 @@ export default function Brief() {
           <a className="pill ghost arrow" href={GITHUB} target="_blank" rel="noopener noreferrer">GitHub</a>
           <a className="pill ghost arrow" href="/">Full site</a>
         </div>
+        <p className="lab-note" style={{ marginBottom: 24 }}>Résumé versions, one page each: <a className="alink" href="/Vikas_Manjunath_Resume_Software.pdf" download>Software engineering</a> · <a className="alink" href="/Vikas_Manjunath_Resume_Product.pdf" download>Product</a> · <a className="alink" href="/Vikas_Manjunath_Resume_Risk-Consulting.pdf" download>Risk and consulting</a></p>
         <div className="grid-brief">
           {CORE.map((p) => (
             <article className="vclaim" key={p.slug} style={{ ['--w' as string]: p.hue }}>
