@@ -86,3 +86,5 @@ npm run og            # regenerate public/og/*.png share cards from the built pa
 Deep links: `/?for=recruiter`, `/?for=judge` or `/?for=founder` opens the page in that visitor order. Essays have permanent URLs under `/writing/<slug>/` and an RSS feed at `/feed.xml`.
 
 Licence: MIT.
+
+The 85-second captioned tour (`public/tour.mp4`, `tour.vtt`) is built by `python3 scripts/video/make-tour.py` from the lab recordings; the narration is a synthetic macOS voice and says so.

@@ -74,3 +74,11 @@ test('evidence ledger filters by class and exposes JSON', async ({ page, request
   expect(j.total).toBe(j.claims.length);
   expect(j.counts.ok + j.counts.doc + j.counts.self).toBe(j.total);
 });
+
+test('brief page carries the captioned tour video', async ({ page, request }) => {
+  await page.goto('/brief/');
+  await expect(page.locator('video#tour, #tour video')).toHaveCount(1);
+  await expect(page.locator('#tour track[kind="captions"]')).toHaveAttribute('src', '/tour.vtt');
+  expect((await request.get('/tour.mp4')).status()).toBe(200);
+  expect(await (await request.get('/tour.vtt')).text()).toContain('WEBVTT');
+});

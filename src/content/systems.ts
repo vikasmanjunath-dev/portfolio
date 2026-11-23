@@ -74,7 +74,7 @@ export const OnlyMeta: Project = {
     ['Latency', 'p95 event-to-dashboard 1.5 s at the demo stream over loopback HTTP; target 10 s', 'doc', 'README'],
     ['Anomalies', 'Rolling 15-min baseline, 30-sample warm-up, z-score with sigma floor, 2-of-3 confirmation (fast path z≥6); anomalous samples are not learned', 'doc', 'README P3'],
     ['Root cause', 'Weighted score: coverage 0.5, timing 0.3, strength 0.2 over the dependency graph; incidents merge within 2 hops and 30 s', 'doc', 'README P3'],
-    ['Testing', '182 tests (contracts, collector, SaaS) plus a self-checking drill: two-tenant isolation, CLI scenarios, kill -9 recovery', 'doc', 'README'],
+    ['Testing', '377 tests pass in a clean virtual environment on a fresh clone of the public repository (the README still says 182), plus a self-checking drill of 41 checks: two-tenant isolation, CLI scenarios, kill -9 recovery', 'ok', 'Re-run 23 Nov 2026: pytest in platform/, then tools/demo.py drill'],
   ],
   arch: {
     title: 'Two tiers, one trust boundary',
@@ -105,11 +105,11 @@ export const OnlyMeta: Project = {
     { problem: 'Rank root causes, not symptoms.', approach: 'Weighted score of coverage, timing and strength over the dependency graph; a silent collector is its own root.', result: 'One incident per failure instead of one alert per node.' },
   ],
   proof: [
-    { n: '182', label: 'tests passing', ev: 'doc', src: 'README' },
+    { n: '377', label: 'tests passing (fresh clone, clean venv)', ev: 'ok', src: 'Re-run 23 Nov 2026; README says 182' },
     { n: '0 / 0', label: 'payloads lost / duplicated in 10,000', ev: 'doc', src: 'README' },
     { n: '1.5 s', label: 'p95 event-to-dashboard (target 10 s)', ev: 'doc', src: 'README' },
     { n: '16', label: 'detector families guarding egress', ev: 'doc', src: 'Egress Proof PDF' },
-    { n: '27', label: 'self-checks in the drill script', ev: 'doc', src: 'README' },
+    { n: '41', label: 'self-checks in the drill script, all pass', ev: 'ok', src: 'Re-run 23 Nov 2026; README says 16' },
   ],
   limits: [
     'Single process: the rate limiter, login throttle and live-stream bus are in memory, and ingest runs on the event loop.',
@@ -183,7 +183,7 @@ export const RELAY: Project = {
     ['Worker', 'Leases, recovery of abandoned work, stage-boundary cancellation, bounded manual retry', 'doc', 'worker.py'],
     ['Auth', 'Static per-user bearer tokens, optional viewer/operator roles, production requires authentication and a non-wildcard CORS list', 'doc', 'README.md'],
     ['Threat model', 'Six trust boundaries: browser to API, upload to store, worker to Gemini, worker to sandbox, storage to backup, task workspace to repository', 'doc', 'THREAT_MODEL.md'],
-    ['Backend tests', '128 passed, 3 skipped in the latest full suite (25 test files)', 'doc', 'TRACKER.md P-B2'],
+    ['Backend tests', '129 passed, 2 skipped when re-run on 23 Nov 2026 in a clean virtual environment (25 test files); the tracker recorded 128 and 3 skipped earlier', 'doc', 'pytest re-run 23 Nov 2026; TRACKER.md P-B2'],
     ['Concurrency drill', '64 queued jobs drained by 16 concurrent store instances; every job claimed once at attempt 1', 'doc', 'TRACKER.md P-D8'],
     ['Seeded demo bug', 'A $10 discount subtracted twice from a $100 cart ($80, not $90): one failing regression, one passing zero-discount test', 'doc', 'demo-store/README.md'],
     ['Never does', 'Push, merge or deploy; auto-apply; trust model output', 'doc', 'BLUEPRINT.md'],
@@ -215,7 +215,7 @@ export const RELAY: Project = {
     { problem: 'A commit acknowledgement can be lost.', approach: 'Disposable-repository drills: stale-base rejection, snapshot matching, recovery after staging, idempotent recognition after a lost acknowledgement.', result: 'Apply and commit stay safe to retry (test_repository_drills.py).' },
   ],
   proof: [
-    { n: '128', label: 'backend tests passing (3 skipped)', ev: 'doc', src: 'TRACKER.md' },
+    { n: '129', label: 'backend tests passing (2 skipped), re-run', ev: 'doc', src: 'pytest 23 Nov 2026; tracker said 128' },
     { n: '25', label: 'backend test files', ev: 'doc', src: 'relay-ai/tests' },
     { n: '6', label: 'trust boundaries in the threat model', ev: 'doc', src: 'THREAT_MODEL.md' },
     { n: '64/16', label: 'jobs / concurrent workers in the claim drill', ev: 'doc', src: 'TRACKER.md' },
@@ -317,6 +317,7 @@ export const STM: Project = {
   limits: [
     'The headline finding is negative: no statistically robust directional edge on Nifty 50 daily direction. This is research, not a trading system, and not advice.',
     'Phase 4 (production API, monitoring, audit log, kill switch) has not started.',
+    'Not independently reproducible yet: the public NIFTY50 repository holds only the README, and the 321-test suite could not be re-run on 23 Nov 2026 because the code on my machine is an incomplete copy. The test counts and results here are my own recorded numbers.',
   ],
   skills: ['Time-series ML validation (purged walk-forward)', 'Leakage prevention', 'Gradient boosting and calibration', 'Cost-aware backtesting', 'Drift monitoring', 'Retrieval-augmented generation with guardrails', 'Statistical honesty and ablation design', 'Test-driven research'],
 };

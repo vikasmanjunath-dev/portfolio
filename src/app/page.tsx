@@ -5,6 +5,7 @@ import { Ticker, Thesis, Work, Method, Decisions, About, Faq } from '@/component
 import { Numbers, Writing, Contact } from '@/components/Client';
 import BuildLog from '@/components/BuildLog';
 import Audience from '@/components/Audience';
+import Testimonials from '@/components/Testimonials';
 
 export default function Page() {
   return (
@@ -22,6 +23,7 @@ export default function Page() {
       <BuildLog />
       <Writing />
       <About />
+      <Testimonials />
       <Faq />
       <Contact />
     </main>

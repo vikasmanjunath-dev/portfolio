@@ -32,7 +32,7 @@ const V: Record<string, V> = {
       { t: 'DueClock: MSME payment-compliance engine', s: 'Python, FastAPI, PostgreSQL, TallyPrime connector', d: 'Nov 2026', b: [
         'Built the statutory clock (Section 43B(h): 15/45 days, RBI-rate interest): 750 tests on PostgreSQL, 30 of 30 mutants killed, 1,000-customer load test passed in 23 s.',
         'Ported the engine to TypeScript; it matches the Python on 400 of 400 random cases.' ] },
-      { ...OM, t: 'OnlyMeta: two-tier observability (CICADA 2026, 24-hour hackathon)', b: ['Led a four-person team’s build: local redaction before any data leaves the site, HMAC-signed ingest with replay defence; 45 commits from my account and 182 tests.'] },
+      { ...OM, t: 'OnlyMeta: two-tier observability (CICADA 2026, 24-hour hackathon)', b: ['Led a four-person team’s build: local redaction before any data leaves the site, HMAC-signed ingest with replay defence; 45 commits from my account and 377 tests.'] },
     ],
     extra: 'Portfolio with live labs and 1,400 parity cases: ' + SITE_URL.replace('https://', '') + ' (source: github.com/vikasmanjunath-dev/portfolio).',
   },
@@ -56,7 +56,7 @@ const V: Record<string, V> = {
       { t: 'DueClock: MSME payment-compliance tool', s: 'Founder', d: 'Nov 2026', b: [
         'Ran customer discovery with MSME suppliers paid past the 15/45-day statutory limit; froze a five-feature v1 scope with ten explicit exclusions.',
         'Tracked 66 roadmap features to launch criteria and published what is still open (eleven legal rulings await a named reviewer).' ] },
-      { ...OM, t: 'OnlyMeta (CICADA 2026, 24-hour hackathon)', b: ['Led a four-person team to a working two-tier observability build that keeps raw data on the customer’s side; 45 commits, 182 tests.'] },
+      { ...OM, t: 'OnlyMeta (CICADA 2026, 24-hour hackathon)', b: ['Led a four-person team to a working two-tier observability build that keeps raw data on the customer’s side; 45 commits, 377 tests.'] },
     ],
     extra: 'Every claim on my portfolio carries an evidence tag (checkable, documented or self-reported): ' + SITE_URL.replace('https://', '') + '.',
   },
@@ -79,7 +79,7 @@ const V: Record<string, V> = {
         'Reduced accessibility contrast failures from 596 to 29 (axe) and validated the scoring logic against the Python on 500 random cases, catching one missed fallback.' ] },
       { t: 'AkaarAI: virtual try-on Android app', s: 'Kotlin, FastAPI', d: 'Oct 2026 – Present', b: [
         'No photo is kept on the server; every verdict traces to a written rule; thresholds are marked provisional and the product makes 0 accuracy claims until tested with people.' ] },
-      { ...OM, t: 'OnlyMeta (CICADA 2026, 24-hour hackathon)', b: ['Led a four-person team’s two-tier design: redaction runs before data leaves the customer site; HMAC-signed requests with nonce replay defence; 45 commits, 182 tests.'] },
+      { ...OM, t: 'OnlyMeta (CICADA 2026, 24-hour hackathon)', b: ['Led a four-person team’s two-tier design: redaction runs before data leaves the customer site; HMAC-signed requests with nonce replay defence; 45 commits, 377 tests.'] },
     ],
     extra: 'Hackathons: CICADA 2026, ChaosCore 2026, Prasunex Innovathon 2026. Evidence-tagged portfolio: ' + SITE_URL.replace('https://', '') + '.',
   },

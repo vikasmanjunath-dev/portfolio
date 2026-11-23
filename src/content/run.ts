@@ -17,12 +17,7 @@ export const RUN: Record<string, RunInfo> = {
   },
   onlymeta: {
     repo: `${GH}/OnlyMeta`,
-    cmds: ['git clone https://github.com/vikasmanjunath-dev/OnlyMeta.git', 'cd OnlyMeta', 'pip3 install -r requirements.txt', 'python3 -m pytest -q          # 182 tests', 'python3 tools/demo.py up      # SaaS :8000 + two collectors', 'python3 tools/demo.py drill   # self-checking drill'],
-    note: 'From the README. Run the commands from the folder that holds requirements.txt.',
-  },
-  'nifty-analyser': {
-    repo: `${GH}/NIFTY50`,
-    cmds: ['git clone https://github.com/vikasmanjunath-dev/NIFTY50.git', 'cd NIFTY50', 'python -m venv .venv && source .venv/bin/activate', 'pip install -r requirements.txt', 'pytest', 'python scripts/run_phase1_baseline.py'],
-    note: 'From the README. Phase 3 needs a local Ollama server.',
+    cmds: ['git clone https://github.com/vikasmanjunath-dev/OnlyMeta.git', 'cd OnlyMeta/platform', 'python3 -m venv .venv && source .venv/bin/activate', 'pip3 install -r requirements.txt', 'python3 -m pytest -q          # 377 tests, about 2 minutes', 'python3 tools/demo.py up      # SaaS :8000 + two collectors', 'python3 tools/demo.py drill   # 41 self-checks, about 2 minutes'],
+    note: 'From the README, corrected after I re-ran it on a fresh clone on 23 Nov 2026: the code is in platform/, and the README’s test counts are out of date.',
   },
 };

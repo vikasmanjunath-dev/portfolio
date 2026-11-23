@@ -10,3 +10,4 @@ lh-*.json
 test-results
 playwright-report
 .og-tmp
+.tour-tmp
