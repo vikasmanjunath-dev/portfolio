@@ -29,7 +29,7 @@ export default function Brief() {
             <source src="/tour.mp4" type="video/mp4" />
             <track kind="captions" src="/tour.vtt" srcLang="en" label="English" default />
           </video>
-          <figcaption className="lab-note">85-second tour of the four core projects, built from the live-lab recordings on this site. Narration is a synthetic voice; captions are on by default. Every number is in the <a className="alink" href="/evidence/">evidence ledger</a>.</figcaption>
+          <figcaption className="lab-note">Tour of the four core projects (about 80 seconds), built from the live-lab recordings on this site. Narration is a synthetic voice; captions are on by default. Every number is in the <a className="alink" href="/evidence/">evidence ledger</a>.</figcaption>
         </figure>
         <div className="grid-brief">
           {CORE.map((p) => (

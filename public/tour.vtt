@@ -1,19 +1,19 @@
 WEBVTT
 
-00:00:00.000 --> 00:00:09.384
-I am Vikas Manjunath, a computer science student in Bengaluru. This is an eighty five second tour of four products I built. Every number you see carries its source.
+00:00:00.000 --> 00:00:11.653
+I am Vikas Manjunath, a computer science student in Bengaluru. This is a short tour of four products I built. Every number you see carries its source.
 
-00:00:09.684 --> 00:00:26.744
+00:00:11.953 --> 00:00:29.015
 FIN-OS is a personal finance app for India. A systemic bug hid behind eighty eight calculators. So I ported the scoring rules and matched them against my original Python on five hundred random cases. All five hundred agree. You can run it yourself on this site.
 
-00:00:27.044 --> 00:00:43.720
+00:00:29.315 --> 00:00:45.990
 VYBES LYNK is a verified students only campus app where location is off by default. The database, not the app, decides how precisely each viewer sees a position. Two hundred eighty three database assertions pass, and fifty one of fifty two mutants are killed.
 
-00:00:44.020 --> 00:00:56.982
+00:00:46.290 --> 00:00:59.253
 AkaarAI gives a colour verdict you can trace to a measurable rule, and keeps no photo on the server. The three colour rules match my Python on five hundred random cases. Five hundred twenty server tests pass.
 
-00:00:57.282 --> 00:01:10.201
+00:00:59.553 --> 00:01:12.471
 DueClock computes statutory payment deadlines and interest for Indian small manufacturers, by rules, never by an LLM. Four hundred random invoices match the original engine, and thirty of thirty mutants are killed.
 
-00:01:10.501 --> 00:01:21.620
+00:01:12.771 --> 00:01:23.890
 Every claim here is tagged checkable, documented, or self reported. Open the evidence ledger on my site, and check the numbers yourself. This narration uses a synthetic voice.

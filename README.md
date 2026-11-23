@@ -87,4 +87,4 @@ Deep links: `/?for=recruiter`, `/?for=judge` or `/?for=founder` opens the page i
 
 Licence: MIT.
 
-The 85-second captioned tour (`public/tour.mp4`, `tour.vtt`) is built by `python3 scripts/video/make-tour.py` from the lab recordings; the narration is a synthetic macOS voice and says so.
+The 80-second captioned tour (`public/tour.mp4`, `tour.vtt`) is built by `python3 scripts/video/make-tour.py` from the lab recordings; the narration is a synthetic macOS voice and says so.
