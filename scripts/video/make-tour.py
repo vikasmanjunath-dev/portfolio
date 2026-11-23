@@ -7,8 +7,8 @@ ROOT = pathlib.Path(__file__).resolve().parents[2]; W = ROOT / '.tour-tmp'; W.mk
 CHROME = os.environ.get('CHROME', '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'); VOICE = 'Tara'
 F = f'file://{ROOT}/node_modules/'
 SEG = [
- dict(id='intro', clip=None, k='Vikas Manjunath · Computer Science · Bengaluru', t='Products you can <i>verify.</i>', sub='A 60-second tour of four core projects. Every number carries its source.', stats=[],
-      say='I am Vikas Manjunath, a computer science student in Bengaluru. This is a sixty second tour of four products I built. Every number you see carries its source.'),
+ dict(id='intro', clip=None, k='Vikas Manjunath · Computer Science · Bengaluru', t='Products you can <i>verify.</i>', sub='An 85-second tour of four core projects. Every number carries its source.', stats=[],
+      say='I am Vikas Manjunath, a computer science student in Bengaluru. This is an eighty five second tour of four products I built. Every number you see carries its source.'),
  dict(id='finos', clip='lab-finos', k='01 · FIN-OS · personal finance for India', t='A bug hid behind <i>88 calculators.</i>', sub='Scoring rules ported to TypeScript and matched against the original Python on 500 random cases: all 500 agree.', stats=[('1,655','mobile tests passing','DOCUMENTED'),('500 / 500','parity cases agree','CHECKABLE')],
       say='FIN-OS is a personal finance app for India. A systemic bug hid behind eighty eight calculators. So I ported the scoring rules and matched them against my original Python on five hundred random cases. All five hundred agree. You can run it yourself on this site.'),
  dict(id='vybes', clip='lab-vybes', k='02 · VYBES LYNK · verified campus app', t='Location is off by default. <i>The database decides.</i>', sub='Precision is decided per viewer inside the database, not in the app.', stats=[('283','database assertions','DOCUMENTED'),('51 / 52','mutants killed','DOCUMENTED')],
