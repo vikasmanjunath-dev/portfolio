@@ -3,6 +3,7 @@ import { CORE, SECONDARY, isCore, tierLabel, type Project } from '@/content';
 import { Ev, Rich, Legend } from './bits';
 import ArchDiagram from './ArchDiagram';
 import { LabById } from './Labs';
+import { PROOF_FILES } from '@/content/ledger';
 import { RUN } from '@/content/run';
 import LabClip from './LabClip';
 const CLIP: Record<string, string> = { finos: 'finos', 'vybes-lynk': 'vybes', akaarai: 'akaar', dueclock: 'clock' };
@@ -107,6 +108,8 @@ export default function CaseFile({ p }: { p: Project }) {
             <p className="lab-note">{RUN[p.slug].note}</p>
             {RUN[p.slug].repo && <p><a className="pill ghost arrow" href={RUN[p.slug].repo} target="_blank" rel="noopener noreferrer">Open the repository</a></p>}
           </section>)}
+
+          {PROOF_FILES[p.slug] && (<p className="lab-note rv">Raw output of my re-run on 23 Nov 2026 (clean virtual environment, fresh copy): {PROOF_FILES[p.slug].map((f, i) => <span key={f.href}>{i ? ' · ' : ''}<a className="alink" href={f.href}>{f.label}</a></span>)}.</p>)}
 
           <section className="cs rv" id="limits"><span className="mono k">Not proven</span>
             <div className="limits"><h3>What is not proven yet</h3><ul className="bullets">{p.limits.map((l) => <li key={l}><Rich here>{l}</Rich></li>)}</ul></div>

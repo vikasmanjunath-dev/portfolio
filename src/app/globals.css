@@ -102,7 +102,7 @@ html.verify .vclaim { outline: 1px dashed var(--line2); outline-offset: 4px; bor
 /* ───────────── Preloader ───────────── */
 .pre { position: fixed; inset: 0; z-index: 400; background: var(--bg); display: none; place-items: center; }
 html.boot .pre { display: grid; }
-.pre.out { animation: preOut 0.9s var(--ease) forwards; }
+.pre.out { animation: preOut 0.6s var(--ease) forwards; }
 @keyframes preOut { to { clip-path: inset(0 0 100% 0); visibility: hidden; } }
 .pre-in { width: min(560px, 88vw); font-family: var(--mono); font-size: 0.8rem; color: var(--dim); display: grid; gap: 6px; }
 .pre-in .ln { display: flex; justify-content: space-between; gap: 16px; opacity: 0; animation: lnIn 0.35s forwards; animation-delay: calc(var(--d) * 1ms); }
@@ -552,3 +552,4 @@ html[data-aud="founder"] #work { order: -80; } html[data-aud="founder"] #decisio
 .led-r { border-top: 1px solid var(--line); background: var(--panel); } .led-r b { color: var(--head); font-weight: 600; } .led-r > a { color: var(--acc); }
 .led-s { font-size: .72rem; color: var(--dim); overflow-wrap: anywhere; }
 @media (max-width: 820px) { .led-h { display: none; } .led-r { grid-template-columns: 1fr 1fr; gap: 6px 14px; } .led-r > span:nth-child(2) { grid-column: 1 / -1; order: 2; } }
+

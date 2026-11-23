@@ -1,0 +1,54 @@
+# Re-run 2026-11-23T16:38:23Z, OnlyMeta public repo, platform/
+$ python tools/demo.py drill
+[drill] data dir <tmp>
+[1] second tenant
+  PASS  alpha and beta see different payloads  15 vs 3 recent, overlap 0
+  PASS  alpha cannot open a beta payload (404)  
+  PASS  regions are IN and EU  in/eu
+  PASS  region files hold only their own tenant  in={'tenant-alpha'} eu={'tenant-beta'}
+[2] CLI scenarios
+  PASS  inject secret runs  {'emitted': ['a006cddb-300c-437f-bd05-e9a4a9d20e1b']}
+  PASS  inject dup: SaaS reports 3 duplicates  {'duplicates_reported_by_saas': 3}
+  PASS  inject incident runs  
+  PASS  incident produced alerts for alpha  6 alerts
+  PASS  inject outage runs  {'outage_s': 6.0}
+  PASS  beta recovered after the outage (outbox empty)  
+  PASS  fake secrets never reached the SaaS files  
+[2b] P3: anomaly -> incident -> root cause -> proposal -> approve -> rollback
+  PASS  incident opened with a named root cause and weighted explanation  INC-1 root db-01 (0.92)
+  PASS  alerts are folded into the incident  
+  PASS  anomalies carry z-score evidence  
+  PASS  a viewer cannot approve a fix (403)  
+  PASS  admin approval executes it as a SIMULATION  executed
+  PASS  beta's incidents never name an alpha node  
+  PASS  rollback restores the previous state  rolled_back
+  PASS  every step is in the audit chain  13 audit rows
+  PASS  SLO card counts detections and never reports a negative time  p50 None s over 0, 2 skipped (drill clock runs 20x)
+  PASS  maintenance window set, listed and cancelled  
+  PASS  policy what-if replays history and saves nothing  2 proposals, 0 would change
+[2c] P4: Proof Board evidence
+  PASS  /demo serves the Proof Board (9 proofs, no data in the page)  
+  PASS  secret scenario returns outbound evidence with 0 credentials  4 payloads
+  PASS  collector ledger reconciles exactly with the SaaS store  200 sent, 0 missing
+  PASS  only an admin can rebuild baselines (viewer 403)  
+  PASS  baseline rebuild is audited  
+[2d] P5: learned topology
+  PASS  declared dependencies rediscovered from telemetry alone, none contradicted  net-01->db-01 7/7 p=0.0078, db-01->app-01 9/9 p=0.002
+  PASS  only an admin can accept a learned edge (viewer 403)  
+  PASS  beta (EU) learns only from its own nodes  beta 2 edges, alpha 2
+[2e] P7: ask the platform
+  PASS  ask: answers cite real incidents of this tenant  1 incident is open. INC-1 (critical, security): db-01: failed-login burst; root cause db-0
+  PASS  ask: an unanswerable question gets no facts and no citations  
+  PASS  ask: beta cannot reach alpha's nodes or incidents through questions  
+[2f] P8: real actuation needs two keys
+  PASS  actuator: default is the simulator, and this collector (actuator off) offers nothing  online=True
+  PASS  actuator: an unsigned request cannot fetch commands  401
+  PASS  actuator: only 'simulation' or 'collector' are accepted values  422
+[3] crash recovery (kill -9)
+  PASS  SaaS killed with SIGKILL  
+  PASS  collectors keep buffering while the SaaS is down  queue 59
+  PASS  verify_delivery alpha: 0 missing / 0 duplicate / 0 mismatch  collector SENT: 856   saas received: 856
+  PASS  verify_delivery beta: 0 missing / 0 duplicate / 0 mismatch  collector SENT: 203   saas received: 203
+  PASS  alpha delivered more after restart  
+[drill] 41/41 passed
+[drill] logs in <tmp>

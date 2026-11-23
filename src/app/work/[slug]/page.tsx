@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation';
 import { PROJECTS, bySlug, tierLabel } from '@/content';
 import CaseFile from '@/components/CaseFile';
 import { Contact } from '@/components/Client';
+import { RUN } from '@/content/run';
+import { SITE_URL } from '@/content/site';
 
 export const dynamicParams = false;
 export function generateStaticParams() { return PROJECTS.map((p) => ({ slug: p.slug })); }
@@ -16,5 +18,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params; const p = bySlug(slug); if (!p) notFound();
-  return (<><CaseFile p={p} /><Contact /></>);
+  const ld = { '@context': 'https://schema.org', '@type': RUN[p.slug]?.repo ? 'SoftwareSourceCode' : 'CreativeWork', name: p.name, description: p.tagline, url: `${SITE_URL}/work/${p.slug}/`, image: `${SITE_URL}/og/work-${p.slug}.png`, author: { '@type': 'Person', name: 'Vikas Manjunath', url: SITE_URL }, keywords: p.stack.flatMap((l) => l.items.map((i) => i.name)).slice(0, 12).join(', '), ...(RUN[p.slug]?.repo ? { codeRepository: RUN[p.slug].repo } : {}) };
+  return (<><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }} /><CaseFile p={p} /><Contact /></>);
 }

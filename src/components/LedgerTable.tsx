@@ -19,7 +19,7 @@ export default function LedgerTable({ claims, counts }: { claims: Claim[]; count
         <div className="led-h" role="row"><span>Project</span><span>Claim</span><span>Value</span><span>Evidence</span><span>Source</span></div>
         {rows.map((c, i) => (
           <div className="led-r" role="row" key={`${c.slug}-${c.where}-${c.label}-${i}`}>
-            <a href={`/work/${c.slug}/`}>{c.project}</a><span>{c.label} <small className="pdim">· {c.where}</small></span><b>{c.value}</b><span><Tag k={c.ev} always /></span><span className="mono led-s">{c.src || 'see case file'}</span>
+            <a href={`/work/${c.slug}/`}>{c.project}</a><span>{c.label} <small className="pdim">· {c.where}</small></span><b>{c.value}</b><span><Tag k={c.ev} always /></span><span className="mono led-s">{c.src || 'see case file'}{c.href ? <> · <a className="alink" href={c.href}>raw log</a></> : null}</span>
           </div>
         ))}
       </div>

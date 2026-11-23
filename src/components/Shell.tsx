@@ -56,7 +56,7 @@ export default function Shell({ children }: { children: React.ReactNode }) {
     setVerifyS(v); setZenS(z); el.classList.toggle('verify', v); el.classList.toggle('zen', z);
     if (el.classList.contains('boot')) {
       setBooting(true);
-      const t1 = setTimeout(() => finishBoot(), 2300);
+      const t1 = setTimeout(() => finishBoot(), 1500);
       return () => clearTimeout(t1);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -64,7 +64,7 @@ export default function Shell({ children }: { children: React.ReactNode }) {
   const finishBoot = useCallback(() => {
     setBootOut(true);
     try { sessionStorage.setItem('vm.boot', '1'); } catch { /* ignore */ }
-    setTimeout(() => { document.documentElement.classList.remove('boot'); setBooting(false); }, 900);
+    setTimeout(() => { document.documentElement.classList.remove('boot'); setBooting(false); }, 600);
   }, []);
 
   const setVerify = useCallback((v: boolean) => { setVerifyS(v); document.documentElement.classList.toggle('verify', v); store.set('vm.verify', v ? '1' : '0'); }, []);

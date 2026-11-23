@@ -1,0 +1,11 @@
+# Re-run 2026-11-23T16:37:32Z on macOS 26.5.2, Python 3.12.0, clean venv, fresh copy
+# repo: github.com/vikasmanjunath-dev/OnlyMeta @ 90d4c30, folder platform/
+$ python -m pytest -q
+
+tests/test_p10_tls.py::test_the_collector_sender_trusts_only_the_ca_it_was_given
+tests/test_p10_tls.py::test_the_collector_sender_trusts_only_the_ca_it_was_given
+  /private/tmp/claude-501/rerun/om-public/platform/.venv/lib/python3.12/site-packages/httpx/_config.py:51: DeprecationWarning: `verify=<str>` is deprecated. Use `verify=ssl.create_default_context(cafile=...)` or `verify=ssl.create_default_context(capath=...)` instead.
+    warnings.warn(message, DeprecationWarning)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+377 passed, 3 warnings in 49.27s
