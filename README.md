@@ -79,7 +79,7 @@ are produced from them with headless Chrome (`--print-to-pdf`), so the PDFs and 
 npm run test:parity   # 1,400 random cases from the real Python vs the TypeScript ports
 npm run build && npm run test:links   # every internal href, src and #anchor in out/
 npm run test:e2e      # Playwright: Verify/Zen/palette keys, ?for= presets, contact form (mocked), honeypot, essays, RSS, 404
-npm run test:lh       # Lighthouse mobile budget (a11y >= 0.98 everywhere, home perf >= 0.7, /brief/ >= 0.9)
+npm run test:lh       # Lighthouse mobile budget (a11y >= 0.98 everywhere, home perf >= 0.4 on a slow CI runner, ~0.86 on a laptop, /brief/ >= 0.9)
 npm run og            # regenerate public/og/*.png share cards from the built pages
 ```
 

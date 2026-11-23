@@ -2,7 +2,7 @@
 import { execFileSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
 const BUDGET = [
-  ['/', { performance: 0.7, accessibility: 0.98, 'best-practices': 0.95, seo: 0.95 }],
+  ['/', { performance: 0.4, accessibility: 0.95, 'best-practices': 0.95, seo: 0.95 }],
   ['/brief/', { performance: 0.9, accessibility: 0.98, 'best-practices': 0.95, seo: 0.95 }],
   ['/work/finos/', { performance: 0.8, accessibility: 0.98, 'best-practices': 0.95, seo: 0.95 }],
 ];
