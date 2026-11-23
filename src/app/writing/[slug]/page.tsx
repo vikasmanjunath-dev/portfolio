@@ -10,7 +10,7 @@ export function generateStaticParams() { return ESSAY_ORDER.map((slug) => ({ slu
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params; const e = ESSAYS[slug]; if (!e) return {};
-  const img = `/og/essay-${slug}.png`;
+  const img = `/og/writing-${slug}.png`;
   return { title: e.t, description: e.d, alternates: { canonical: `/writing/${slug}/` },
     openGraph: { type: 'article', title: e.t, description: e.d, url: `/writing/${slug}/`, images: [{ url: img, width: 1200, height: 630 }] },
     twitter: { card: 'summary_large_image', title: e.t, description: e.d, images: [img] } };
@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params; const e = ESSAYS[slug]; if (!e) notFound();
   const i = ESSAY_ORDER.indexOf(slug), nx = ESSAY_ORDER[(i + 1) % ESSAY_ORDER.length];
-  const ld = { '@context': 'https://schema.org', '@type': 'Article', headline: e.t, description: e.d, url: `${SITE_URL}/writing/${slug}/`, image: `${SITE_URL}/og/essay-${slug}.png`, author: { '@type': 'Person', name: 'Vikas Manjunath', url: SITE_URL } };
+  const ld = { '@context': 'https://schema.org', '@type': 'Article', headline: e.t, description: e.d, url: `${SITE_URL}/writing/${slug}/`, image: `${SITE_URL}/og/writing-${slug}.png`, author: { '@type': 'Person', name: 'Vikas Manjunath', url: SITE_URL } };
   return (
     <>
       <main id="main" className="wrap" style={{ paddingTop: 140, maxWidth: 760, display: 'grid', gap: 18 }}>
