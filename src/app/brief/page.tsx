@@ -21,6 +21,8 @@ export default function Brief() {
           <a className="pill ghost" href="/Vikas_Manjunath_Resume.pdf" download>Résumé (PDF)</a>
           <a className="pill ghost arrow" href={LINKEDIN} target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a className="pill ghost arrow" href={GITHUB} target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a className="pill ghost" href="/Vikas_Manjunath_Portfolio.pdf" download>Portfolio (10-page PDF)</a>
+          <a className="pill ghost arrow" href="/match/">Match a job description</a>
           <a className="pill ghost arrow" href="/">Full site</a>
         </div>
         <p className="lab-note" style={{ marginBottom: 24 }}>Résumé versions, one page each: <a className="alink" href="/Vikas_Manjunath_Resume_Software.pdf" download>Software engineering</a> · <a className="alink" href="/Vikas_Manjunath_Resume_Product.pdf" download>Product</a> · <a className="alink" href="/Vikas_Manjunath_Resume_Risk-Consulting.pdf" download>Risk and consulting</a></p>

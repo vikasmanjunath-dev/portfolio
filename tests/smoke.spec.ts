@@ -82,3 +82,12 @@ test('brief page carries the captioned tour video', async ({ page, request }) =>
   expect((await request.get('/tour.mp4')).status()).toBe(200);
   expect(await (await request.get('/tour.vtt')).text()).toContain('WEBVTT');
 });
+
+test('JD matcher ranks projects and names honest gaps', async ({ page }) => {
+  await page.goto('/match/');
+  await page.getByRole('button', { name: 'Try a sample' }).click();
+  await expect(page.locator('.vclaim').first()).toBeVisible();
+  await expect(page.getByText('Asked for, not in my projects')).toBeVisible();
+  await expect(page.locator('.limits .fchip', { hasText: 'kubernetes' })).toBeVisible();
+  await expect(page.locator('.limits .fchip', { hasText: 'postgresql' })).toHaveCount(0);
+});
