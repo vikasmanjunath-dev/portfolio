@@ -11,4 +11,10 @@
 <url><loc>https://vikas-manjunath.vercel.app/work/syndicate/</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
 <url><loc>https://vikas-manjunath.vercel.app/work/bunkbudget/</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
 <url><loc>https://vikas-manjunath.vercel.app/brief/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>https://vikas-manjunath.vercel.app/writing/decline/</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+<url><loc>https://vikas-manjunath.vercel.app/writing/private/</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+<url><loc>https://vikas-manjunath.vercel.app/writing/rules/</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+<url><loc>https://vikas-manjunath.vercel.app/writing/measured/</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+<url><loc>https://vikas-manjunath.vercel.app/writing/negative/</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+<url><loc>https://vikas-manjunath.vercel.app/writing/parity/</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
 </urlset>

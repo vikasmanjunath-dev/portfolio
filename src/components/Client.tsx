@@ -70,7 +70,7 @@ export function Writing() {
         <div className="sheet-bg" onMouseDown={(ev) => { if (ev.target === ev.currentTarget) setOpen(null); }}>
           <article className="sheet" role="dialog" aria-modal="true" aria-label={e.t}>
             <button className="pill ghost sm" type="button" style={{ justifySelf: 'start' }} onClick={() => setOpen(null)}>Close · Esc</button>
-            <span className="mono">{e.m} min read</span>
+            <span className="mono">{e.m} min read · <a href={`/writing/${open}/`}>Permalink</a></span>
             <h2>{e.t}</h2>
             {e.b.map((p, i) => <p key={i}><Rich>{p}</Rich></p>)}
           </article>

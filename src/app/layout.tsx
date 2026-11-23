@@ -16,11 +16,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: { default: title, template: '%s · Vikas Manjunath' },
   description,
-  alternates: { canonical: '/' },
   openGraph: { title, description, type: 'website', url: '/', images: [{ url: '/og.png', width: 1200, height: 630 }] },
   twitter: { card: 'summary_large_image', title, description, images: ['/og.png'] },
   icons: { icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }, { url: '/favicon.ico' }], apple: '/apple-touch-icon.png' },
   manifest: '/site.webmanifest',
+  alternates: { canonical: '/', types: { 'application/rss+xml': '/feed.xml' } },
 };
 export const viewport: Viewport = { themeColor: '#03060f', width: 'device-width', initialScale: 1 };
 

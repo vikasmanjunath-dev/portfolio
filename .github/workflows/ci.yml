@@ -17,3 +17,14 @@ jobs:
       - name: Parity tests (TypeScript ports vs 1,400 cases generated from the real Python)
         run: npm run test:parity
       - run: npm run build
+      - name: Broken-link check (every internal href, src and #anchor in out/)
+        run: npm run test:links
+      - name: End-to-end smoke tests (Verify/Zen/palette, ?for=, contact form, honeypot, essays, 404)
+        run: |
+          npx playwright install --with-deps chromium
+          npm run test:e2e
+      - name: Lighthouse budget (mobile)
+        run: |
+          npx serve out -l 4300 &
+          npx wait-on http://localhost:4300 --timeout 30000
+          npm run test:lh

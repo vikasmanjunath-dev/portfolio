@@ -44,7 +44,7 @@ export default function ArchDiagram({ arch, hue }: { arch: Project['arch']; hue:
           );
         })}
       </svg></div>
-      <div className="arch-detail" aria-live="polite"><span className="mono" style={{ color: 'var(--w)' }}>{arch.title} · click a node</span><h4>{node.label}</h4><p>{node.detail}</p></div>
+      <div className="arch-detail" aria-live="polite"><span className="mono" style={{ color: 'var(--w)' }}>{arch.title} · click a node</span><h4 aria-level={3}>{node.label}</h4><p>{node.detail}</p></div>
     </div>
   );
 }

@@ -9,6 +9,9 @@ import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { buildRoom, ROOM_PORTAL_Z, type Action } from './room';
 import { buildCity } from './city';
+import { Z0, ZL, GATES, P_INTRO, P_PORTAL, GATE_P, type Cur } from './diveConsts';
+export { Z0, ZL, GATES, P_INTRO, P_PORTAL, GATE_P };
+export type { Cur };
 
 /**
  * THE STACK: a flight down an octagonal server corridor. Walls are procedural circuit boards with live pulses,
@@ -16,17 +19,6 @@ import { buildCity } from './city';
  * and terminal windows, chips and nested data cubes float in the volume. Post: bloom, chromatic aberration,
  * scanlines and glitch bursts on every gate crossing. Scroll drives `cur.p` (0..1); everything is derived from it.
  */
-export const Z0 = 4, ZL = 125;
-export const GATES = [
-  { z: -26, hue: '#c6f135', p: 0.24, tag: 'GATE 01 // VERIFY' },
-  { z: -52, hue: '#5ea1ff', p: 0.24, tag: 'GATE 02 // PRIVACY' },
-  { z: -78, hue: '#ff7a59', p: 0.24, tag: 'GATE 03 // RULES' },
-  { z: -104, hue: '#ffc247', p: 0.24, tag: 'GATE 04 // CLOCK' },
-];
-/** Timeline: 0..P_PORTAL the room (over the shoulder, into the screen); P_PORTAL..P_INTRO the plunge; then the tunnel. */
-export const P_INTRO = 0.14, P_PORTAL = 0.105;
-export const GATE_P = GATES.map((g) => P_INTRO + ((Z0 - g.z) / ZL) * (1 - P_INTRO));
-export type Cur = { p: number; vel: number };
 
 const TL = ZL + 34; // tunnel length
 const R = 9; // circumradius of the octagon

@@ -5,7 +5,7 @@ import { FLAGSHIP } from '@/content';
 import { EMAIL } from '@/content/site';
 import { Ev } from './bits';
 import { useApp } from './Shell';
-import { GATE_P, GATES, P_INTRO, P_PORTAL, type Cur } from './DiveScene';
+import { GATE_P, GATES, P_INTRO, P_PORTAL, type Cur } from './diveConsts';
 
 const K = 1 - P_INTRO; // tunnel share of the timeline
 

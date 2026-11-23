@@ -14,7 +14,7 @@ export default async function OnePager({ params }: { params: Promise<{ slug: str
   return (
     <>
       <PrintStyle />
-      <div className="pp">
+      <div className="pp" id="main">
         <div className="prow"><span className="pdim">{p.idx} · Core project · Vikas Manjunath</span><span className="pdim">{p.status}</span></div>
         <h1>{p.name}</h1>
         <p className="psub">{p.tagline}</p>

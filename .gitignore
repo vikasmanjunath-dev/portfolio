@@ -5,3 +5,8 @@ out
 next-env.d.ts
 .DS_Store
 .vercel
+
+lh-*.json
+test-results
+playwright-report
+.og-tmp

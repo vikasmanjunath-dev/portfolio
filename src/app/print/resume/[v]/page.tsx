@@ -98,7 +98,7 @@ export default async function Resume({ params }: { params: Promise<{ v: string }
         .rs .r{display:flex;justify-content:space-between;gap:8px;align-items:baseline} .rs .r span:last-child{white-space:nowrap} .rs ul{margin:1px 0 2px;padding-left:15px} .rs li{margin:.6px 0;padding-left:0}
         .rs a{color:#000;text-decoration:none} .rs i{font-style:italic} .rs p{margin:1px 0}
       `}</style>
-      <div className="rs">
+      <div className="rs" id="main">
         <h1>Vikas Manjunath</h1>
         <p className="c">Bengaluru, India · {EMAIL} · 9986010907</p>
         <p className="c"><a href={LINKEDIN}>linkedin.com/in/vikas-manjunath-ab0842258</a> · <a href={GITHUB}>github.com/vikasmanjunath-dev</a> · <a href={SITE_URL}>{SITE_URL.replace('https://', '')}</a></p>

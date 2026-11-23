@@ -10,7 +10,7 @@ type A = (typeof AUD)[number][0];
 
 export default function Audience() {
   const [a, setA] = useState<A>('recruiter');
-  useEffect(() => { try { const v = localStorage.getItem('vm.aud') as A | null; if (v && AUD.some((x) => x[0] === v)) { setA(v); document.documentElement.dataset.aud = v; } } catch { /* ignore */ } }, []);
+  useEffect(() => { try { const q = new URLSearchParams(location.search).get('for'); const v = (AUD.some((x) => x[0] === q) ? q : localStorage.getItem('vm.aud')) as A | null; if (v && AUD.some((x) => x[0] === v)) { setA(v); document.documentElement.dataset.aud = v; } } catch { /* ignore */ } }, []);
   const pick = (v: A) => { setA(v); document.documentElement.dataset.aud = v; try { localStorage.setItem('vm.aud', v); } catch { /* ignore */ } };
   return (
     <div className="aud" role="group" aria-label="Reorder this page for you">

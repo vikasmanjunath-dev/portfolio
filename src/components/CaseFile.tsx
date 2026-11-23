@@ -85,7 +85,7 @@ export default function CaseFile({ p }: { p: Project }) {
           <section className="cs rv" id="decisions"><span className="mono k">Decisions</span>
             <h2>What I chose, what I turned down, and why.</h2>
             <div className="decs">{p.decisions.map((d) => (
-              <div className="dec" key={d.q}><h4>{d.q}</h4>
+              <div className="dec" key={d.q}><h4 aria-level={3}>{d.q}</h4>
                 <div className="opts"><div className="c"><b>Chose</b><span><Rich here>{d.chose}</Rich><Ev k="doc" src="decision logs and PRDs in the project folder" /></span></div><div className="r"><b>Not</b><span>{d.rejected}</span></div><div className="w"><b>Why</b><span><Rich here>{d.why}</Rich></span></div>{d.cost && <div className="x"><b>Cost</b><span>{d.cost}</span></div>}</div></div>))}</div>
           </section>
 

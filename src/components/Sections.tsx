@@ -127,7 +127,7 @@ export function Journey() {
           {TIMELINE.map((t, i) => (
             <div className={`tl-i rv ${t.ev === 'self' ? 'plan' : ''}`} key={t.when + t.title} style={{ ['--i' as string]: i % 3 } as CSSProperties}>
               <span className="w">{t.when} · {t.tag}</span>
-              <h4>{t.title}<Ev k={t.ev} /></h4>
+              <h4 aria-level={3}>{t.title}<Ev k={t.ev} /></h4>
               <p>{t.body}</p>
             </div>
           ))}
@@ -152,7 +152,7 @@ export function About() {
         <div>
           <div className="edu rv">{EDU.map((e) => <div key={e.when}><div><b>{e.score}</b><small>{e.label}</small></div><div><span className="mono">{e.when}</span><p style={{ marginTop: 4 }}>{e.what}</p></div></div>)}</div>
           <p className="mono kicker" style={{ marginTop: 40 }}>Events and certificates</p>
-          <div className="certs">{CERTS.map((c) => <div className="cert rv" key={c.title}><h4>{c.title}<Ev k={c.ev} /></h4><span className="mono">{c.org}</span><p style={{ marginTop: 6 }}>{c.what}</p></div>)}</div>
+          <div className="certs">{CERTS.map((c) => <div className="cert rv" key={c.title}><h4 aria-level={3}>{c.title}<Ev k={c.ev} /></h4><span className="mono">{c.org}</span><p style={{ marginTop: 6 }}>{c.what}</p></div>)}</div>
           <p className="lead" style={{ marginTop: 16, fontSize: '.88rem' }}>These are certificates of participation, not awards.</p>
         </div>
       </div>
