@@ -8,6 +8,7 @@
     "build": "next build --webpack",
     "start": "npx serve out -l 4300",
     "typecheck": "tsc --noEmit",
+    "pdfs": "node scripts/make-pdfs.mjs",
     "og": "node scripts/og/make-og.mjs",
     "test:parity": "node scripts/parity/clock.parity.mts && node scripts/parity/akaar.parity.mts && node scripts/parity/finos.parity.mts",
     "test:links": "node scripts/check-links.mjs",

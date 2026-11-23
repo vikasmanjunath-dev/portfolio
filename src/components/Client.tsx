@@ -124,7 +124,7 @@ export function Contact() {
           </div>
         </div>
       </section>
-      <footer className="foot wrap"><span>© 2026 Vikas Manjunath · Bengaluru · <a className="alink" href={LINKEDIN} target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a className="alink" href={GITHUB} target="_blank" rel="noopener noreferrer">GitHub</a></span><span>Built with Next.js, Three.js and Lenis. Every claim tagged with its evidence. <a className="alink" href={SITE_REPO} target="_blank" rel="noopener noreferrer">Source code</a></span></footer>
+      <footer className="foot wrap"><span>© 2026 Vikas Manjunath · Bengaluru · <a className="alink" href={LINKEDIN} target="_blank" rel="noopener noreferrer">LinkedIn</a> · <a className="alink" href={GITHUB} target="_blank" rel="noopener noreferrer">GitHub</a></span><span>Built with Next.js, Three.js and Lenis. Every claim tagged with its evidence. <a className="alink" href={SITE_REPO} target="_blank" rel="noopener noreferrer">Source code</a> · <a className="alink" href="/evidence/">Evidence ledger</a> · <a className="alink" href="/feed.xml">RSS</a></span></footer>
     </>
   );
 }

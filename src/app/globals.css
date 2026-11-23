@@ -542,3 +542,13 @@ html[data-aud="founder"] #work { order: -80; } html[data-aud="founder"] #decisio
 
 /* phones: the intro's text and buttons stack instead of sitting side by side */
 @media (max-width: 820px) { .dive-intro .hero-sub { grid-template-columns: minmax(0, 1fr); } .dive-intro .hero-cta { justify-content: flex-start; } .dive-intro .hero-cta .pill { flex: 1 1 calc(50% - 12px); justify-content: space-between; } }
+
+/* evidence ledger */
+.fld-in { padding: 9px 14px; border-radius: 999px; border: 1px solid var(--line2); background: var(--panel); color: var(--ink); font: inherit; font-size: .85rem; }
+.fld-in:focus-visible { outline: 2px solid var(--acc); outline-offset: 2px; }
+.led { display: grid; border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; margin-top: 10px; }
+.led-h, .led-r { display: grid; grid-template-columns: 1.1fr 2.4fr 1fr 1fr 1.7fr; gap: 14px; padding: 12px 18px; align-items: center; font-size: .88rem; }
+.led-h { background: var(--panel2); font: 500 .7rem/1 var(--mono); text-transform: uppercase; letter-spacing: .1em; color: var(--dim); }
+.led-r { border-top: 1px solid var(--line); background: var(--panel); } .led-r b { color: var(--head); font-weight: 600; } .led-r > a { color: var(--acc); }
+.led-s { font-size: .72rem; color: var(--dim); overflow-wrap: anywhere; }
+@media (max-width: 820px) { .led-h { display: none; } .led-r { grid-template-columns: 1fr 1fr; gap: 6px 14px; } .led-r > span:nth-child(2) { grid-column: 1 / -1; order: 2; } }

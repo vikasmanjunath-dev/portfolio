@@ -99,7 +99,7 @@ export default function CaseFile({ p }: { p: Project }) {
             <div className="proofs">{p.proof.map((x) => <div className="proof" key={x.label}><div className="v">{x.n}</div><span>{x.label}</span><span className="mono" style={{ fontSize: '.62rem' }}>{x.src}</span><Ev k={x.ev} src={x.src} always /></div>)}</div>
           </section>
 
-          {isCore(p) && <p className="rv"><a className="pill ghost arrow" href={`/onepagers/${p.slug}.pdf`} download>One-page summary (PDF)</a></p>}
+          <p className="rv"><a className="pill ghost arrow" href={`/onepagers/${p.slug}.pdf`} download>One-page summary (PDF)</a></p>
 
           {RUN[p.slug] && (<section className="cs rv" id="run"><span className="mono k">Run it yourself</span>
             <h2>Check it on your own machine.</h2>

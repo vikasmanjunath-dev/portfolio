@@ -26,6 +26,7 @@ export default function Palette({ onClose }: { onClose: () => void }) {
       { id: 'a-mail', label: 'Copy my email', hint: EMAIL, group: 'Actions', run: close(() => { try { navigator.clipboard.writeText(EMAIL); } catch { /* ignore */ } toast('Email copied'); }) },
       { id: 'a-cv', label: 'Download résumé (PDF)', hint: 'PDF', group: 'Actions', run: close(() => { const a = document.createElement('a'); a.href = '/Vikas_Manjunath_Resume.pdf'; a.download = ''; a.click(); }) },
       { id: 'a-brief', label: '30-second version', hint: 'page', group: 'Actions', run: close(() => { window.location.href = '/brief/'; }) },
+      { id: 'a-ledger', label: 'Evidence ledger (every number, with its source)', hint: 'page', group: 'Actions', run: close(() => { window.location.href = '/evidence/'; }) },
       { id: 'a-gh', label: 'Open GitHub', hint: '↗', group: 'Actions', run: close(() => window.open(GITHUB, '_blank', 'noopener')) },
       { id: 'a-li', label: 'Open LinkedIn', hint: '↗', group: 'Actions', run: close(() => window.open(LINKEDIN, '_blank', 'noopener')) },
     );

@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { CORE, bySlug } from '@/content';
+import { PROJECTS, bySlug, tierLabel } from '@/content';
 import { EV } from '@/content/types';
 import { SITE_URL, EMAIL } from '@/content/site';
 import PrintStyle from '../PrintStyle';
 
 export const dynamicParams = false;
-export function generateStaticParams() { return CORE.map((p) => ({ slug: p.slug })); }
+export function generateStaticParams() { return PROJECTS.map((p) => ({ slug: p.slug })); }
 export const metadata: Metadata = { title: 'One-page summary (print)', robots: { index: false, follow: false } };
 
 export default async function OnePager({ params }: { params: Promise<{ slug: string }> }) {
@@ -15,7 +15,7 @@ export default async function OnePager({ params }: { params: Promise<{ slug: str
     <>
       <PrintStyle />
       <div className="pp" id="main">
-        <div className="prow"><span className="pdim">{p.idx} · Core project · Vikas Manjunath</span><span className="pdim">{p.status}</span></div>
+        <div className="prow"><span className="pdim">{p.idx} · {tierLabel(p)} · Vikas Manjunath</span><span className="pdim">{p.status}</span></div>
         <h1>{p.name}</h1>
         <p className="psub">{p.tagline}</p>
         <p className="pdim"><b>My role:</b> {p.role}</p>

@@ -63,3 +63,14 @@ test('unknown route returns the honest 404', async ({ page }) => {
   await page.goto('/nope/');
   await expect(page.locator('h1')).toContainText('failed verification');
 });
+
+test('evidence ledger filters by class and exposes JSON', async ({ page, request }) => {
+  await page.goto('/evidence/');
+  const all = await page.getByRole('status').filter({ hasText: 'claims' }).first().innerText();
+  await page.getByRole('button', { name: /Self-reported/ }).click();
+  const some = await page.getByRole('status').filter({ hasText: 'claims' }).first().innerText();
+  expect(some).not.toBe(all);
+  const j = await (await request.get('/evidence.json')).json();
+  expect(j.total).toBe(j.claims.length);
+  expect(j.counts.ok + j.counts.doc + j.counts.self).toBe(j.total);
+});
