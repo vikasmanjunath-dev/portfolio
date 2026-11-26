@@ -82,7 +82,7 @@ export const METHOD: { step: string; line: string; artifacts: string[] }[] = [
   { step: 'Scope', line: 'Write down what is in, and what is out.', artifacts: ['19-phase MoSCoW roadmap in FIN-OS', 'Ten explicit exclusions in DueClock, frozen at v1.2', 'Non-goals in AkaarAI: no accounts, live AR, iOS release or model training'] },
   { step: 'Decide', line: 'Log every decision and who must act.', artifacts: ['Decision logs with owner actions (VYBES LYNK)', 'Change requests CR-01 and CR-02 (AkaarAI)', 'Amendments D-21 and D-22 (DueClock)', 'Open-decision sign-off before parallel build (OnlyMeta)'] },
   { step: 'Design', line: 'Make the system explainable before it is built.', artifacts: ['PRD, FRD, TRD, BRD, MRD, CRD, DRD, ARD, NFRD and SOP for FIN-OS', 'A 95-token design system with light and dark themes', 'Adapters around everything risky in DueClock', 'A threat model with six trust boundaries (RELAY AI)'] },
-  { step: 'Prove', line: 'Set the gates, then measure against them.', artifacts: ['1,655 + 592 tests (FIN-OS), 714/750 (DueClock), 520 + 262 (AkaarAI)', 'Mutation tests: 29/30, 22/22 and 30/30 mutants killed', 'Launch criteria and kill tests for DueClock', 'A NOT_MEASURED register for AkaarAI'] },
+  { step: 'Prove', line: 'Set the gates, then measure against them.', artifacts: ['1,655 + 592 tests (FIN-OS), 714 on SQLite and 750 on PostgreSQL (DueClock), 520 + 262 (AkaarAI)', 'Mutation tests: 29/30, 22/22 and 30/30 mutants killed', 'Launch criteria and kill tests for DueClock', 'A NOT_MEASURED register for AkaarAI'] },
 ];
 
 /* ───────── Timeline: dated entries come from the folders' own docs ───────── */
@@ -97,7 +97,7 @@ export const TIMELINE: { when: string; title: string; body: string; ev: Ev; tag:
   { when: '1-4 Nov 2026', title: 'AkaarAI walking skeleton and PRD v0.5', body: 'Server with checks and verdict rules; 25-page PRD, 36 FRs; first real FASHN VTON runs.', ev: 'doc', tag: 'AkaarAI' },
   { when: '10-12 Nov 2026', title: 'VYBES LYNK audit remediation', body: 'Ban-evasion fingerprint, per-viewer rounding, directory-scrape limits, mutation tests.', ev: 'doc', tag: 'VYBES LYNK' },
   { when: '19 Nov 2026', title: 'FIN-OS 1,655 mobile tests · DueClock on real Tally', body: 'tally-check PASS on TallyPrime 7.2; FIN-OS site tests 592 passing.', ev: 'doc', tag: 'Milestone' },
-  { when: '20 Nov 2026', title: 'DueClock 714 / 750 tests · OnlyMeta Phase 1', body: '1,000-customer load test; OnlyMeta two-tier AIOps build and Egress Proof prepared.', ev: 'doc', tag: 'Milestone' },
+  { when: '20 Nov 2026', title: 'DueClock tests: 714 SQLite, 750 PostgreSQL · OnlyMeta Phase 1', body: '1,000-customer load test; OnlyMeta two-tier AIOps build and Egress Proof prepared.', ev: 'doc', tag: 'Milestone' },
   { when: '21 Nov 2026', title: 'This site, v3', body: 'Four lab engines ported to TypeScript and parity-tested against the originals.', ev: 'ok', tag: 'Site' },
   { when: 'Dec 2026', title: 'AkaarAI demo', body: 'Planned demo of the virtual try-on app.', ev: 'self', tag: 'Planned' },
   { when: '2028', title: 'Graduation', body: 'B.E. Computer Science, class of 2028.', ev: 'self', tag: 'Planned' },
@@ -176,7 +176,7 @@ export const NUMBERS: { n: number; suffix?: string; label: string; sub: string; 
   { n: 750, label: 'DueClock tests', sub: 'on PostgreSQL, 20 Nov 2026', ev: 'doc', to: 'dueclock' },
   { n: 520, label: 'AkaarAI server tests', sub: 'plus 262 app tests', ev: 'doc', to: 'akaarai' },
   { n: 283, label: 'VYBES LYNK database assertions', sub: 'privacy rules tested in SQL', ev: 'doc', to: 'vybes-lynk' },
-  { n: 1400, suffix: '/1,400', label: 'port parity cases', sub: 'three labs vs your Python engines', ev: 'ok', to: 'dueclock' },
+  { n: 1400, suffix: '/1,400', label: 'port parity cases', sub: 'three labs vs my Python engines', ev: 'ok', to: 'dueclock' },
   { n: 87, suffix: '%', label: 'less map data per hour', sub: '63 MB to 8.4 MB', ev: 'doc', to: 'vybes-lynk' },
 ];
 

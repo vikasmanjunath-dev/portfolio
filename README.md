@@ -3,7 +3,7 @@
 # Vikas Manjunath · proof-of-work portfolio (v3)
 
 **Concept: "Trust is a layer", taken literally.** Every other portfolio says *trust me*. This one lets a visitor *check*:
-every claim carries an evidence tag, every core project has a full case file, and five engines from the real projects run in the browser.
+every claim carries an evidence tag, every core project has a full case file, and six labs built from the real projects run in the browser.
 
 ## Run
     npm install
@@ -22,7 +22,7 @@ every claim carries an evidence tag, every core project has a full case file, an
 | **Verify mode (V)** | Tags every claim `CHK` / `DOC` / `SELF` with its source. |
 | **Zen mode (Z)** | No 3D, grain, cursor or smooth scroll. Automatic for reduced motion. |
 | **⌘K / Ctrl+K** | Command palette over projects, technologies, essays and actions. `T` toggles the theme. |
-| **Writing** | Five essays, including *I measured my own classifier. It failed. I replaced it.* |
+| **Writing** | Six essays, including *I measured my own classifier. It failed. I replaced it.* |
 
 ## Evidence classes
 `Checkable`: open it or run it here · `Documented`: recorded in my own project docs, tests or changelogs (not public) · `Self-reported`: my word.
@@ -49,7 +49,6 @@ To regenerate the DueClock cases from the real engine:
 
 ## [TODO] needs your input
 - **Domain** (above).
-- **OnlyMeta role**: the repo is a four-lane team build (collector, SaaS, AIOps, frontend) and does not say which lane was yours. Edit `role` in `src/content/systems.ts`.
 - **Role wording**: the case files say you define the product and decisions and build with Claude Code. Adjust `role` fields and the FAQ answer if that is not how you want it put.
 - **DueClock hosting**: the repo's deploy config is Fly.io (Tokyo) plus a Supabase database in Seoul; the old site said AWS Mumbai. The case file states both and marks the data-residency decision as open. Update it when decided.
 - **FIN-OS voice**: the reply voice uses Microsoft Edge TTS (cloud, per your own TRD). The site says so under "not proven". Replace with a local TTS and update, or keep the note.
