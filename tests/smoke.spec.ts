@@ -96,11 +96,11 @@ test('certificates page filters, searches and opens a certificate image', async 
   await page.goto('/certificates/');
   await expect(page.getByRole('heading', { level: 1 })).toContainText('Every certificate');
   const note = page.locator('.lab-note').first();
-  await expect(note).toContainText('62 of 62');
+  await expect(note).toContainText('63 of 63');
   await page.getByRole('button', { name: /Participation · 18/ }).click();
-  await expect(note).toContainText('18 of 62');
+  await expect(note).toContainText('18 of 63');
   await page.getByLabel('Search certificates').fill('IPL');
-  await expect(note).toContainText('1 of 62');
+  await expect(note).toContainText('1 of 63');
   await page.getByRole('button', { name: /Open certificate: IPL Auction/ }).click();
   const dlg = page.getByRole('dialog');
   await expect(dlg.locator('img')).toBeVisible();
