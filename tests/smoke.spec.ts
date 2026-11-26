@@ -91,3 +91,20 @@ test('JD matcher ranks projects and names honest gaps', async ({ page }) => {
   await expect(page.locator('.limits .fchip', { hasText: 'kubernetes' })).toBeVisible();
   await expect(page.locator('.limits .fchip', { hasText: 'postgresql' })).toHaveCount(0);
 });
+
+test('certificates page filters, searches and opens a certificate image', async ({ page }) => {
+  await page.goto('/certificates/');
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('Every certificate');
+  const note = page.locator('.lab-note').first();
+  await expect(note).toContainText('62 of 62');
+  await page.getByRole('button', { name: /Participation · 18/ }).click();
+  await expect(note).toContainText('18 of 62');
+  await page.getByLabel('Search certificates').fill('IPL');
+  await expect(note).toContainText('1 of 62');
+  await page.getByRole('button', { name: /Open certificate: IPL Auction/ }).click();
+  const dlg = page.getByRole('dialog');
+  await expect(dlg.locator('img')).toBeVisible();
+  await expect(dlg.locator('img')).toHaveAttribute('alt', /IPL Auction/);
+  await page.keyboard.press('Escape');
+  await expect(dlg).toBeHidden();
+});

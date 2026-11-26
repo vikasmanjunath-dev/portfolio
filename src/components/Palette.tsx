@@ -28,6 +28,7 @@ export default function Palette({ onClose }: { onClose: () => void }) {
       { id: 'a-brief', label: '30-second version', hint: 'page', group: 'Actions', run: close(() => { window.location.href = '/brief/'; }) },
       { id: 'a-tour', label: 'Watch the 80-second tour', hint: 'video', group: 'Actions', run: close(() => { window.location.href = '/brief/#tour'; }) },
       { id: 'a-match', label: 'Match a job description to my projects', hint: 'page', group: 'Actions', run: close(() => { window.location.href = '/match/'; }) },
+      { id: 'a-certs', label: 'Certificates (with photos)', hint: 'page', group: 'Actions', run: close(() => { window.location.href = '/certificates/'; }) },
       { id: 'a-ledger', label: 'Evidence ledger (every number, with its source)', hint: 'page', group: 'Actions', run: close(() => { window.location.href = '/evidence/'; }) },
       { id: 'a-gh', label: 'Open GitHub', hint: '↗', group: 'Actions', run: close(() => window.open(GITHUB, '_blank', 'noopener')) },
       { id: 'a-li', label: 'Open LinkedIn', hint: '↗', group: 'Actions', run: close(() => window.open(LINKEDIN, '_blank', 'noopener')) },

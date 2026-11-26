@@ -1,5 +1,6 @@
 import { CORE, SECONDARY, PROJECTS, tierLabel } from '@/content';
-import { PRINCIPLES, METHOD, TIMELINE, EDU, COURSEWORK, CERTS, CERT_COUNT, COURSES, COURSE_COUNT, FAQ } from '@/content/site';
+import { CERT_COUNT, COURSE_COUNT, CERT_IMAGES } from '@/content/certs';
+import { PRINCIPLES, METHOD, TIMELINE, EDU, COURSEWORK, FAQ } from '@/content/site';
 import { Ev, Rich, Split, Legend } from './bits';
 import type { CSSProperties } from 'react';
 
@@ -151,17 +152,9 @@ export function About() {
         </div>
         <div>
           <div className="edu rv">{EDU.map((e) => <div key={e.when}><div><b>{e.score}</b><small>{e.label}</small></div><div><span className="mono">{e.when}</span><p style={{ marginTop: 4 }}>{e.what}</p></div></div>)}</div>
-          <p className="mono kicker" style={{ marginTop: 40 }}>Events and certificates · {CERT_COUNT} participation certificates</p>
-          <div className="certs">{CERTS.map((c) => <div className="cert rv" key={c.title}><h4 aria-level={3}>{c.title}<Ev k={c.ev} /></h4><span className="mono">{c.org}</span><ul className="bullets" style={{ marginTop: 6 }}>{c.items.map((i) => <li key={i.n}>{i.n}{i.d ? <span className="mono" style={{ opacity: 0.7 }}> · {i.d}</span> : null}</li>)}</ul></div>)}</div>
-          <p className="lead" style={{ marginTop: 16, fontSize: '.88rem' }}>These are certificates of participation, not awards. Each is posted on my LinkedIn.</p>
-          <p className="mono kicker" style={{ marginTop: 32 }}>Course certificates · {COURSE_COUNT}</p>
-          {COURSES.map((c) => (
-            <details key={c.org} className="rv" style={{ marginTop: 10 }}>
-              <summary style={{ cursor: 'pointer' }}><b style={{ color: 'var(--head)', fontWeight: 500 }}>{c.org}</b> <span className="mono">· {c.items.length}</span></summary>
-              <ul className="bullets" style={{ marginTop: 8 }}>{c.items.map((i) => <li key={i}>{i}</li>)}</ul>
-            </details>
-          ))}
-          <p className="lead" style={{ marginTop: 10, fontSize: '.88rem' }}>Completion certificates, not credentials. Titles are exactly as shown on the certificates posted to my LinkedIn.</p>
+          <p className="mono kicker" style={{ marginTop: 40 }}>Events and certificates</p>
+          <p className="lead rv" style={{ marginTop: 14 }}><b style={{ color: 'var(--head)', fontWeight: 500 }}>{CERT_COUNT}</b> participation certificates (hackathons, expos and masterclasses; none is a win) and <b style={{ color: 'var(--head)', fontWeight: 500 }}>{COURSE_COUNT}</b> course certificates from IBM SkillsBuild, the University of Michigan, Infosys Springboard, Great Learning, Cursa and LinkedIn Learning. {CERT_IMAGES} have their certificate image on the page.</p>
+          <p style={{ marginTop: 14 }}><a className="alink" href="/certificates/">See every certificate, with photos →</a></p>
         </div>
       </div>
     </section>

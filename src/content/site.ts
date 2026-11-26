@@ -113,49 +113,6 @@ export const COURSEWORK: [string, string][] = [
   ['DBMS', 'Row-level security, migrations, query plans in VYBES LYNK and DueClock'],
 ];
 
-type Cert = { n: string; d?: string };
-/** Events and their certificates, read from the LinkedIn posts. Participation only, nothing here is a win. `attend` = no certificate. */
-export const CERTS: { title: string; org: string; items: Cert[]; ev: Ev; attend?: boolean }[] = [
-  { title: 'CICADA 2026', org: 'TechForcz × Atria Institute of Technology', ev: 'doc', items: [
-    { n: 'Project Expo', d: '19 Nov 2026' }, { n: 'IPL Auction', d: '19 Nov 2026' }, { n: '24-hour hackathon (OnlyMeta, a secure two-tier AIOps build)', d: '20–21 Nov 2026' } ] },
-  { title: 'ADHIGAMYA: AI Tech Conclave 2026', org: 'DSATM, Dept. of CSE (AI) with the CSI Student Branch', ev: 'doc', items: [
-    { n: 'Yantra Drishti: Prompt to Pixel Challenge', d: '4 May 2026' }, { n: 'Antarveda: Cyber Heist Simulation', d: '5 May 2026' } ] },
-  { title: 'TechFusion 2.0', org: 'CloudSEK · DSATM, Dept. of CSE (IoT, Cybersecurity, Blockchain)', ev: 'doc', items: [
-    { n: 'Hackathon', d: '27–29 Apr 2026' }, { n: 'Ideathon', d: '27–29 Apr 2026' } ] },
-  { title: 'Aurora Tech Fest 2025', org: 'Dayananda Sagar Academy of Technology and Management', ev: 'doc', items: [{ n: 'GFG Codeathon' }, { n: 'Fest workshops' }] },
-  { title: 'Codex 48 and Code Conqueror India 2026', org: 'National hackathons by WeCodeCoders · via Unstop', ev: 'doc', items: [
-    { n: 'Codex 48: National-Level Hackathon', d: '22 Nov 2026' }, { n: 'Code Conqueror India 2026: National Hackathon', d: '21 Nov 2026' } ] },
-  { title: 'Prasunex Innovathon 2026', org: 'Organised by Prasunex · via Unstop', ev: 'doc', items: [
-    { n: 'Idea Submission and Innovation Screening' }, { n: 'Solution Design and Technical Evaluation' } ] },
-  { title: 'Hustle Carnival', org: 'GI Bajaj Group of Institutions · via Unstop', ev: 'doc', items: [{ n: 'Participation' }] },
-  { title: 'Build 2026 × ByteAsk (YC F26)', org: 'Open-Source Challenge by Hackyard · via Unstop', ev: 'doc', items: [{ n: 'Open-Source Challenge' }] },
-  { title: 'ChaosCore Hackathon 2026', org: 'Organised by Invoqe', ev: 'doc', items: [{ n: 'Hackathon' }] },
-  { title: 'Scaler masterclasses', org: 'Scaler', ev: 'doc', items: [
-    { n: 'Kafka and ZooKeeper', d: '21 Sep 2026' }, { n: 'The FDE Simulation: Build and Deploy AI in 3 Hours', d: '19 Sep 2026' } ] },
-  { title: 'WeAreDevelopers Conference India 2026', org: 'Bengaluru · 25–26 Nov 2026', ev: 'doc', attend: true, items: [{ n: 'Attending (conference pass); no certificate yet' }] },
-];
-export const CERT_COUNT = CERTS.filter((c) => !c.attend).reduce((n, c) => n + c.items.length, 0);
-
-/** Course certificates posted on LinkedIn (completion, not credentials). Every title was read from the post or the certificate image. */
-export const COURSES: { org: string; items: string[] }[] = [
-  { org: 'IBM SkillsBuild', items: ['Machine Learning for Data Science Projects'] },
-  { org: 'University of Michigan (Coursera)', items: ['Python Data Structures', 'Programming for Everybody (Getting Started with Python)'] },
-  { org: 'Great Learning Academy', items: ['Introduction to Artificial Intelligence', 'Introduction to Cyber Security'] },
-  { org: 'Cursa', items: ['Cryptography and Network Security'] },
-  { org: 'Infosys Springboard', items: ['Programming in C', 'MATLAB for Beginners', 'Fundamentals of Cryptography', 'Fundamentals of Information Security', 'Network Fundamentals', 'Introduction to Cyber Security', 'Cyber Security Foundation', 'Salesforce CRM: The Definitive Admin'] },
-  { org: 'LinkedIn Learning', items: [
-    'Software Architecture: From Developer to Architect', 'C#: Applied Data Structures', 'Introduction to Web APIs', 'Networking Foundations: Networking Basics',
-    'Programming Foundations: SDKs', 'Programming Foundations: Memory, Pointers, and Garbage Collection', 'Programming Foundations: Inside Computing Hardware',
-    'Agentic AI Fundamentals: Architectures, Frameworks, and Applications', 'Introduction to NLP and LLMs: Principles and Practical Applications', 'Generative AI: Working with Large Language Models',
-    'Intelligent Automation Foundations', 'Advanced Prompt Engineering Techniques', 'Prompt Engineering: How to Talk to the AIs', 'Prompt Engineering with ChatGPT',
-    "ChatGPT's Operator: Automating Everyday Tasks with AI Agents", 'Structure Vibe Coding to Save Build Time', 'Enhancing Product Development with Custom ChatGPTs',
-    'Streamlining Your Work with Microsoft Copilot', 'Learning Microsoft 365 Copilot and Business Chat', 'What Is Web3?', 'Introduction to Fintech',
-    'Agile Foundations', 'Agile Project Leadership', 'Comparing Agile versus Waterfall Project Management', 'Design Thinking for Project Management',
-    'Design Thinking, Social Innovation, and Complex Systems', 'Quality Management for Operational Excellence', 'Becoming an AI-First Product Leader',
-    'Ethics in the Age of Generative AI', 'Digital Body Language'] },
-];
-export const COURSE_COUNT = COURSES.reduce((n, c) => n + c.items.length, 0);
-
 /* ───────── Writing ───────── */
 export type Essay = { t: string; d: string; m: number; b: string[] };
 import essaysRaw from './essays.json';

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { EMAIL, LINKEDIN, GITHUB, SITE_URL, CERT_COUNT, COURSE_COUNT } from '@/content/site';
+import { EMAIL, LINKEDIN, GITHUB, SITE_URL } from '@/content/site';
+import { CERT_COUNT, COURSE_COUNT } from '@/content/certs';
 
 export const dynamicParams = false;
 export function generateStaticParams() { return [{ v: 'software' }, { v: 'product' }, { v: 'risk' }]; }
