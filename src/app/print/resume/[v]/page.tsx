@@ -53,8 +53,8 @@ const V: Record<string, V> = {
       { t: 'AkaarAI: virtual try-on Android app', s: 'Product owner and builder', d: 'Oct 2026 – Present', b: [
         'Authored the 25-page PRD (36 functional requirements, success metrics, launch criteria); chose rule-based verdicts over model opinion so every result is traceable.',
         'Measured my own classifier, found it failed (2 of 23 striped garments), replaced it, and recorded that the product makes 0 accuracy claims until it is tested with people.' ] },
-      { t: 'DueClock: MSME payment-compliance tool', s: 'Founder', d: 'Nov 2026', b: [
-        'Ran customer discovery with MSME suppliers paid past the 15/45-day statutory limit; froze a five-feature v1 scope with ten explicit exclusions.',
+      { t: 'DueClock: MSME payment-compliance tool', s: 'Team lead, about 50% of the code', d: 'Nov 2026', b: [
+        'With the team, ran customer discovery with MSME suppliers paid past the 15/45-day statutory limit; froze a five-feature v1 scope with ten explicit exclusions.',
         'Tracked 66 roadmap features to launch criteria and published what is still open (eleven legal rulings await a named reviewer).' ] },
       { ...OM, t: 'OnlyMeta (CICADA 2026, 24-hour hackathon)', b: ['Led a four-person team to a working two-tier observability build that keeps raw data on the customer’s side; 45 commits, 377 tests.'] },
     ],

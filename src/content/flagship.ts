@@ -436,7 +436,7 @@ export const DUE: Project = {
   slug: 'dueclock', idx: '04', name: 'DueClock', kind: 'Core', hue: '#ffc247', status: 'Built · pre-pilot', tone: 'build',
   tagline: 'A statutory-clock receivables autopilot for Indian micro and small manufacturers on TallyPrime: due dates, interest and reminders computed by rules, never by an LLM.',
   period: 'Nov 2026',
-  role: 'Founder. Customer discovery, PRD, frozen v1.2 scope with ten exclusions, architecture, and the implementation (AI-assisted, verified by tests).',
+  role: 'Team lead on a hackathon team, about 50% of the code. The product work covers customer discovery, the PRD, a frozen v1.2 scope with ten exclusions and the architecture; implementation is AI-assisted and verified by tests.',
   problem: {
     headline: 'Micro and small suppliers wait past the legal 15 or 45 days for payment and chase by phone, while buyers rarely track the limit.',
     context: [
