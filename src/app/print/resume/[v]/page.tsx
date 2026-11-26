@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { EMAIL, LINKEDIN, GITHUB, SITE_URL } from '@/content/site';
+import { EMAIL, LINKEDIN, GITHUB, SITE_URL, CERT_COUNT, COURSE_COUNT } from '@/content/site';
 
 export const dynamicParams = false;
 export function generateStaticParams() { return [{ v: 'software' }, { v: 'product' }, { v: 'risk' }]; }
@@ -81,7 +81,7 @@ const V: Record<string, V> = {
         'No photo is kept on the server; every verdict traces to a written rule; thresholds are marked provisional and the product makes 0 accuracy claims until tested with people.' ] },
       { ...OM, t: 'OnlyMeta (CICADA 2026, 24-hour hackathon)', b: ['Led a four-person team’s two-tier design: redaction runs before data leaves the customer site; HMAC-signed requests with nonce replay defence; 45 commits, 377 tests.'] },
     ],
-    extra: 'Participation certificates: CICADA 2026, Codex 48, Code Conqueror India 2026, Prasunex Innovathon 2026, ChaosCore 2026. Evidence-tagged portfolio: ' + SITE_URL.replace('https://', '') + '.',
+    extra: CERT_COUNT + ' participation certificates (CICADA 2026, ADHIGAMYA, TechFusion 2.0, Codex 48, Code Conqueror India 2026, Prasunex Innovathon 2026, ChaosCore 2026) and ' + COURSE_COUNT + ' course certificates. Evidence-tagged portfolio: ' + SITE_URL.replace('https://', '') + '.',
   },
 };
 
@@ -115,7 +115,7 @@ export default async function Resume({ params }: { params: Promise<{ v: string }
         {d.skills.map(([a, b]) => <p key={a}><b>{a}:</b> {b}</p>)}
         <h2>Additional</h2>
         <p>{d.extra}</p>
-        {v !== 'risk' && <p>Participation certificates: CICADA 2026 (Project Expo, 24-hour hackathon), Codex 48 and Code Conqueror India 2026 (national hackathons), Prasunex Innovathon 2026, ChaosCore 2026. Courses: IBM SkillsBuild (Machine Learning for Data Science Projects), University of Michigan (Python Data Structures), Infosys Springboard (Programming in C, Cyber Security Foundation) and more.</p>}
+        {v !== 'risk' && <p>{CERT_COUNT} participation certificates: CICADA 2026 (Project Expo, IPL Auction, 24-hour hackathon), ADHIGAMYA, TechFusion 2.0, Codex 48, Code Conqueror India 2026, Prasunex Innovathon 2026, ChaosCore 2026 and more. {COURSE_COUNT} course certificates: IBM SkillsBuild, University of Michigan, Infosys Springboard, Great Learning, LinkedIn Learning.</p>}
       </div>
     </>
   );
