@@ -1,7 +1,7 @@
 import type { Ev } from './types';
 
 export const EMAIL = 'vikasmanjunath.dev@gmail.com';
-export const LINKEDIN = 'https://www.linkedin.com/in/vikas-manjunath-ab0842258';
+export const LINKEDIN = 'https://www.linkedin.com/in/vikas-manjunath-';
 /** Contact-form delivery: FormSubmit (formsubmit.co) forwards each message to the inbox; no account needed, the owner confirms once by email. Empty = open the visitor's email app instead. */
 export const FORM_URL = 'https://formsubmit.co/ajax/vikasmanjunath.dev@gmail.com';
 export const GITHUB = 'https://github.com/vikasmanjunath-dev';
@@ -114,9 +114,20 @@ export const COURSEWORK: [string, string][] = [
 ];
 
 export const CERTS: { title: string; org: string; what: string; ev: Ev }[] = [
-  { title: 'Prasunex Innovathon 2026', org: 'Organised by Prasunex · via Unstop', what: 'Certificate of participation: Solution Design & Technical Evaluation round (team vkm.techgeek).', ev: 'doc' },
+  { title: 'CICADA 2026', org: 'TechForcz × Atria Institute of Technology', what: 'Two participation certificates: the Project Expo (19 Nov 2026) and the 24-hour hackathon, where the team built OnlyMeta, a secure two-tier AIOps observability platform.', ev: 'doc' },
+  { title: 'Codex 48 and Code Conqueror India 2026', org: 'National hackathons organised by WeCodeCoders · via Unstop', what: 'Certificates of participation in both (neither was a win; the LinkedIn post about the second says so).', ev: 'doc' },
+  { title: 'Prasunex Innovathon 2026', org: 'Organised by Prasunex · via Unstop', what: 'Two participation certificates: Idea Submission and Innovation Screening, and the Solution Design & Technical Evaluation round.', ev: 'doc' },
   { title: 'ChaosCore Hackathon 2026', org: 'Organised by Invoqe', what: 'Certificate of participation.', ev: 'doc' },
-  { title: 'CICADA 2026', org: 'TechForcz × Atria Institute of Technology', what: '24-hour hackathon on secure two-tier AIOps observability: Phase 1 pack and working build prepared 20 Nov 2026.', ev: 'doc' },
+  { title: 'TechFusion 2.0 Ideathon · Aurora Tech Fest 2025', org: 'Dayananda Sagar Academy of Technology and Management', what: 'Participation certificates for the ideathon (CloudSEK) and for the fest workshops and the GFG Codeathon.', ev: 'doc' },
+  { title: 'Scaler masterclasses and WeAreDevelopers India 2026', org: 'Scaler · WeAreDevelopers, Bengaluru', what: 'Participation certificates for two masterclasses (Kafka and ZooKeeper; the FDE simulation, build and deploy AI). Registered to attend the WeAreDevelopers conference.', ev: 'doc' },
+];
+
+/** Course certificates posted on LinkedIn (completion, not credentials). Titles only where legible on the posts. */
+export const COURSES: { org: string; items: string }[] = [
+  { org: 'IBM SkillsBuild', items: 'Machine Learning for Data Science Projects' },
+  { org: 'University of Michigan (Coursera)', items: 'Python Data Structures; Programming for Everybody' },
+  { org: 'Infosys Springboard', items: 'Programming in C; Cyber Security Foundation; Fundamentals of Cryptography; Network Fundamentals; MATLAB for Beginners; Salesforce CRM Admin' },
+  { org: 'LinkedIn Learning', items: 'Software Architecture: Developer to Architect; C#: Applied Data Structures; Introduction to Web APIs; Networking Foundations; Agentic AI Fundamentals; Introduction to NLP and LLMs; Generative AI: Working with LLMs; Introduction to Fintech; Agile Foundations; and more' },
 ];
 
 /* ───────── Writing ───────── */

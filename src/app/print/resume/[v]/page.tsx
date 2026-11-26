@@ -81,7 +81,7 @@ const V: Record<string, V> = {
         'No photo is kept on the server; every verdict traces to a written rule; thresholds are marked provisional and the product makes 0 accuracy claims until tested with people.' ] },
       { ...OM, t: 'OnlyMeta (CICADA 2026, 24-hour hackathon)', b: ['Led a four-person team’s two-tier design: redaction runs before data leaves the customer site; HMAC-signed requests with nonce replay defence; 45 commits, 377 tests.'] },
     ],
-    extra: 'Hackathons: CICADA 2026, ChaosCore 2026, Prasunex Innovathon 2026. Evidence-tagged portfolio: ' + SITE_URL.replace('https://', '') + '.',
+    extra: 'Participation certificates: CICADA 2026, Codex 48, Code Conqueror India 2026, Prasunex Innovathon 2026, ChaosCore 2026. Evidence-tagged portfolio: ' + SITE_URL.replace('https://', '') + '.',
   },
 };
 
@@ -101,7 +101,7 @@ export default async function Resume({ params }: { params: Promise<{ v: string }
       <div className="rs" id="main">
         <h1>Vikas Manjunath</h1>
         <p className="c">Bengaluru, India · {EMAIL} · 9986010907</p>
-        <p className="c"><a href={LINKEDIN}>linkedin.com/in/vikas-manjunath-ab0842258</a> · <a href={GITHUB}>github.com/vikasmanjunath-dev</a> · <a href={SITE_URL}>{SITE_URL.replace('https://', '')}</a></p>
+        <p className="c"><a href={LINKEDIN}>linkedin.com/in/vikas-manjunath-</a> · <a href={GITHUB}>github.com/vikasmanjunath-dev</a> · <a href={SITE_URL}>{SITE_URL.replace('https://', '')}</a></p>
         {d.summary && (<><h2>Summary</h2><p>{d.summary}</p></>)}
         <h2>Education</h2>
         <div className="r"><span><b>Dayananda Sagar Academy of Technology and Management</b>, Bengaluru</span><span>2024 – 2028 (expected)</span></div>
@@ -115,7 +115,7 @@ export default async function Resume({ params }: { params: Promise<{ v: string }
         {d.skills.map(([a, b]) => <p key={a}><b>{a}:</b> {b}</p>)}
         <h2>Additional</h2>
         <p>{d.extra}</p>
-        {v !== 'risk' && <p>Hackathons: CICADA 2026 (TechForcz × Atria Institute of Technology), ChaosCore Hackathon 2026, Prasunex Innovathon 2026.</p>}
+        {v !== 'risk' && <p>Participation certificates: CICADA 2026 (Project Expo, 24-hour hackathon), Codex 48 and Code Conqueror India 2026 (national hackathons), Prasunex Innovathon 2026, ChaosCore 2026. Courses: IBM SkillsBuild (Machine Learning for Data Science Projects), University of Michigan (Python Data Structures), Infosys Springboard (Programming in C, Cyber Security Foundation) and more.</p>}
       </div>
     </>
   );

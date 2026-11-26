@@ -1,5 +1,5 @@
 import { CORE, SECONDARY, PROJECTS, tierLabel } from '@/content';
-import { PRINCIPLES, METHOD, TIMELINE, EDU, COURSEWORK, CERTS, FAQ } from '@/content/site';
+import { PRINCIPLES, METHOD, TIMELINE, EDU, COURSEWORK, CERTS, COURSES, FAQ } from '@/content/site';
 import { Ev, Rich, Split, Legend } from './bits';
 import type { CSSProperties } from 'react';
 
@@ -154,6 +154,9 @@ export function About() {
           <p className="mono kicker" style={{ marginTop: 40 }}>Events and certificates</p>
           <div className="certs">{CERTS.map((c) => <div className="cert rv" key={c.title}><h4 aria-level={3}>{c.title}<Ev k={c.ev} /></h4><span className="mono">{c.org}</span><p style={{ marginTop: 6 }}>{c.what}</p></div>)}</div>
           <p className="lead" style={{ marginTop: 16, fontSize: '.88rem' }}>These are certificates of participation, not awards.</p>
+          <p className="mono kicker" style={{ marginTop: 32 }}>Course certificates</p>
+          <ul className="bullets" style={{ marginTop: 14 }}>{COURSES.map((c) => <li key={c.org}><b style={{ color: 'var(--head)', fontWeight: 500 }}>{c.org}</b>: {c.items}</li>)}</ul>
+          <p className="lead" style={{ marginTop: 10, fontSize: '.88rem' }}>Completion certificates, not credentials. Each is posted on my LinkedIn.</p>
         </div>
       </div>
     </section>

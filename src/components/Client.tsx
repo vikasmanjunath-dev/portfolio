@@ -116,7 +116,7 @@ export function Contact() {
             </form>
             <div className="reach rv">
               <div><span className="mono">Email</span><b>{EMAIL}</b></div>
-              <div><span className="mono">LinkedIn</span><b><a className="alink" href={LINKEDIN} target="_blank" rel="noopener noreferrer">linkedin.com/in/vikas-manjunath-ab0842258</a></b></div>
+              <div><span className="mono">LinkedIn</span><b><a className="alink" href={LINKEDIN} target="_blank" rel="noopener noreferrer">linkedin.com/in/vikas-manjunath-</a></b></div>
               <div><span className="mono">GitHub</span><b><a className="alink" href={GITHUB} target="_blank" rel="noopener noreferrer">github.com/vikasmanjunath-dev</a></b></div>
               <div><span className="mono">Based in</span><b>Bengaluru, India</b></div>
               <div><span className="mono">Shortcuts</span><b><span className="kbd">⌘K</span> search · <span className="kbd">V</span> verify · <span className="kbd">Z</span> zen · <span className="kbd">T</span> theme</b></div>
